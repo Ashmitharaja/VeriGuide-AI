@@ -1,0 +1,22 @@
+VFD-7 VARIABLE FREQUENCY DRIVE FAULT CODE REFERENCE
+
+FAULT F01 OVERCURRENT
+F01 is shown when the output current exceeds 200 percent of the drive rated current. Causes are a short circuit in the motor cable, an acceleration time that is too short, or a jammed load. Increase the acceleration time parameter P1.10 and check the motor cable insulation.
+
+FAULT F02 OVERVOLTAGE
+F02 is shown when the DC bus voltage exceeds 820 V. It usually happens during fast deceleration of a high-inertia load. Increase the deceleration time parameter P1.11 or fit a braking resistor.
+
+FAULT F04 UNDERVOLTAGE
+F04 is shown when the DC bus voltage falls below 400 V. Check the incoming supply voltage and the input fuses.
+
+FAULT F07 DRIVE OVERTEMPERATURE
+F07 means the heatsink temperature of the drive has exceeded 90 °C. Check that the drive cooling fan is running, clean the heatsink, and make sure the cabinet ambient temperature is below 40 °C. The fault can be reset only after the heatsink cools below 70 °C.
+
+FAULT F09 MOTOR OVERLOAD
+F09 means the electronic motor thermal model has reached 100 percent. Check the motor current against the value in parameter P2.01 (motor rated current) and reduce the mechanical load.
+
+FAULT F12 INPUT PHASE LOSS
+F12 means one of the three input phases is missing. Check the input fuses and supply cable connections.
+
+RESETTING FAULTS
+Press the STOP/RESET key on the keypad to reset a fault once its cause has been removed. Three resets of the same fault within 10 minutes lock the drive, and it must be power cycled.
